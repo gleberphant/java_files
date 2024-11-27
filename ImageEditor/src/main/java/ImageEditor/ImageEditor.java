@@ -1,21 +1,23 @@
 package ImageEditor;
 
-
+/**
+ * Classe principal do programa image editor
+ */
 class ImageEditor{
 
-
-
-    ImageEditor(){
-
-    }
-
-
     public void run(){
+        String pathFile = ".\\ImageEditor\\assets\\image1.bmp";
 
-        ImageFile image = new ImageFile(".\\ImageEditor\\assets\\image1.bmp");
-        image.readFile();
+        ImageFile image = new ImageFile(pathFile);
+
+        System.out.println("\nLendo o arquivo: " + pathFile);
+        image.readFileBMP();
+
+        System.out.println("\nAplicando efeito de grayscale: " + pathFile);
         image.grayScale();
-        image.writeFile();
+
+        System.out.println("\nSalvando o arquivo novo: " + pathFile);
+        image.writeFileBMP();
         
     }
 
