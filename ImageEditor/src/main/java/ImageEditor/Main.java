@@ -3,9 +3,10 @@ package ImageEditor;
 /**
  * Classe principal do programa image editor
  */
-class ImageEditor{
+class Main {
 
-    public void run(){
+    public static void main(String[] args){
+
         String pathFile = ".\\ImageEditor\\assets\\image1.bmp";
 
         ImageFile image = new ImageFile(pathFile);
@@ -18,10 +19,5 @@ class ImageEditor{
 
         System.out.println("\nSalvando o arquivo novo: " + pathFile);
         image.writeFileBMP();
-        
-    }
-
-    public static void main(String[] args){
-        new ImageEditor().run();
     }
 }
